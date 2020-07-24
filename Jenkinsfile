@@ -8,7 +8,7 @@ node{
     stage('Run Docker Compose File')
     {
         sh 'echo 2581104554 | sudo -S docker-compose build'
-        sh 'sudo docker-compose up -d'
+        sh 'sudo -S docker-compose up -d'
     }
   stage('PUSH image to Docker Hub')
     {
