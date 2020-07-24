@@ -7,7 +7,7 @@ node{
     
     stage('Run Docker Compose File')
     {
-        sh 'ssh -t sudo docker-compose build'
+        sh 'ssh -n sudo docker-compose build'
         sh 'sudo docker-compose up -d'
     }
   stage('PUSH image to Docker Hub')
